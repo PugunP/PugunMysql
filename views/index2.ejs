@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="profile">
+    <title>Pugun Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <!-- Navigation Bar-->
+         <header>
+            <nav>
+                <img class="logo" src="images/Pugun.svg" alt="logo">
+                <div class="links">
+                    <a href="#">About</a>
+                    <a href="#">Docs</a>
+                    <button class="button_med" href="#">Login</button>
+                </div>
+            </nav>
+         </header>
+         <!--contents-->
+         <section class="info">
+            <h1 class="content_font1"><%= contentfont1 %></h1>
+            <h4 class="content_font2"><%= contentfont2 %></h4>
+            <div class="icons">
+                <div class="icon">
+                    <img src="images/email.svg" alt="email">
+                    <p class="icon_info">Satapat72@gmail.com</p>
+                </div>
+                <div class="icon">
+                    <img src="images/facebook.svg" alt="facebook">
+                    <p class="icon_info">Satapat jampa</p>
+                </div>
+                <div class="icon">
+                    <img src="images/youtube.svg" alt="youtube">
+                    <p class="icon_info">PugunDev</p>
+                </div>
+                <div class="icon">
+                    <img src="images/twitter.svg" alt="twitter">
+                    <p class="icon_info">NugupX</p>
+                </div>
+            </div>
+         </section>
+         <!--Feature Bar-->
+         <section class="features">
+            <!-- Add Paramiter that forEach loop-->
+             <% obj_feature.forEach(function(feature){ %> 
+            <div class="feature">
+                <img src= <%= feature.img %> alt="Programming">
+                <div class="feature_info">
+                    <p class="feature_top"><%= feature.top %></p>
+                    <p class="feature_buttom">
+                        <%= feature.buttom %>
+                    </p>
+                </div>
+            </div>
+        <% }) %> 
+            <!---
+            <div class="feature">
+                <img src="images/AIoT.jpg" alt="AIoT">
+                <div class="feature_info">
+                    <p class="feature_top">AIoT & Robotics</p>
+                    <p class="feature_buttom">
+                        Enjoy Coding & Playing Python, 
+                        Ros,Mechanics
+                    </p>
+                </div>
+            </div>
+        -->
+            <div class="feature">
+                <div class="feature_info">
+                    <p class="feature_more">Learn More</p>
+                </div>
+            </div>
+         </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
